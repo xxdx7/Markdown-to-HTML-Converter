@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown → HTML converter · polished</title>
+    <!-- Font & basic reset -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <h1>
+            ⚡ markdown → html
+            <small>converter</small>
+        </h1>
+
+        <div class="grid">
+            <!-- INPUT -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span>✏️ markdown input</span>
+                    <span class="badge">live</span>
+                </div>
+                <textarea id="markdown-input" placeholder="Type markdown here …"># Hello world  
+## This is a heading 2  
+### And a heading 3  
+
+**bold text** and __also bold__  
+*italic* and _italic_ too  
+
+![alt text](https://placehold.co/600x200/2e7a9e/white?text=Markdown)  
+
+[visit GitHub](https://github.com)  
+
+> This is a quote block.  
+> It can span multiple lines.</textarea>
+            </div>
+
+            <!-- HTML OUTPUT + PREVIEW (side by side) -->
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.2rem; padding: 0;">
+                <!-- raw HTML -->
+                <div class="panel" style="padding: 1rem 1rem 1.2rem;">
+                    <div class="panel-header" style="margin-bottom: 0.8rem;">
+                        <span>🔍 raw html</span>
+                        <span class="badge" style="background: #2d4e5e;">code</span>
+                    </div>
+                    <div id="html-output" class="html-output-box"><span style="color: #6b9bb5;">// converted HTML will appear here</span></div>
+                </div>
+
+                <!-- preview -->
+                <div class="panel" style="padding: 1rem 1rem 1.2rem;">
+                    <div class="panel-header" style="margin-bottom: 0.8rem;">
+                        <span>👁️ preview</span>
+                        <span class="badge" style="background: #2d4e5e;">rendered</span>
+                    </div>
+                    <div id="preview" class="preview-box"><span class="empty-state">✨ live preview</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-note"><span>markdown → headings, bold, italic, images, links, blockquotes</span></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
